@@ -1,2 +1,4 @@
 # The-C-Programming-Language
-Practice problems from the K&amp;R book
+All the practice problems from the K&amp;R book
+
+Yes, even the hello world problem :) 
