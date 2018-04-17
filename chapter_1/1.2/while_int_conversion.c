@@ -17,7 +17,7 @@ int main()
 	{ 
 
 		celsius = 5 * (fahr - 32) / 9;
-		printf("%d\t%d\n", fahr, celsius);
+		printf("%10d %10d\n", fahr, celsius);
 		fahr += step;
 	}
 }
