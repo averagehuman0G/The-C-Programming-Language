@@ -3,26 +3,23 @@
 #define FALSE 0 
 
 int main() {
+	// did we place a space right before
 	int spaceBefore = FALSE;
-	int encounterSpace = FALSE;
 	int c;	
 	
 	while((c = getchar()) != EOF ) { 
 		if( (c == '\t' || c == '\n' || c == '\r')) { 
-			if (!encounterSpace && !spaceBefore) {
+			if (!spaceBefore) {
 				putchar(' ');
 			}
-			encounterSpace = TRUE;
 			spaceBefore = TRUE;
 		} else if ( c != ' ' ) {
 			putchar(c);
-			encounterSpace = FALSE;
 			spaceBefore = FALSE;
 		}
 
-		if( !encounterSpace && !spaceBefore && c == ' ') {
+		if( !spaceBefore && c == ' ') {
 			putchar(' ');
-			encounterSpace = TRUE;
 			spaceBefore = TRUE;
 		}
 	}
