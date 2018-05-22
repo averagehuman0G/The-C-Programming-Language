@@ -1,20 +1,20 @@
 #include <stdio.h>
+
 int main() {
 	int c;
+	// Have we already placed a new line?
+	int previousIsNL = 0; 		
 	
-
-	while( (c = getchar()) != EOF) {
-		if (c == '\n') { 
-			putchar('\n');
-			putchar('\\');
-			putchar('n');
-			putchar('\n');
-		}
-		else if( c == ' ' || c == '\t' )
+	while( (c = getchar() ) != EOF) {
+		if( ( c == ' ' || c == '\t' ) && !previousIsNL) {
 			putchar('\n');	
-		else  
+			previousIsNL = 1;
+		} else if (c == ' ' || c == '\t' ) {
+			continue;
+		} else { 
 			putchar(c);	
-		
+			previousIsNL = 0;
+		}
 	}
 
 }
