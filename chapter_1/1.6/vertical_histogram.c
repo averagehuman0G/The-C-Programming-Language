@@ -1,9 +1,7 @@
 #include <stdio.h>
 
-#define IN 1
-#define OUT 0
-
 int main() {
+
 	int c, i;
 	int numOfChars = 0;
 	int state = IN;
@@ -16,13 +14,11 @@ int main() {
 	
 	while ( (c = getchar()) != EOF) {
 		if ( c == ' ' || c == '\t' || c == '\n') {
-			state = OUT;
 			if(numOfChars > 0)
 				charsInWord[numOfChars - 1]++;
 			numOfChars = 0;
 		}
 		else {
-			state = IN;
 			numOfChars++;
 		}
 	}
