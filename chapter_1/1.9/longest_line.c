@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define MAXLINE 1000
+#define MAXLINE 1000  
 
 int getlinelen(char line[], int maxline);
 void copy(char to[], char from[]);
@@ -29,8 +29,9 @@ int main() {
 int getlinelen(char s[], int lim) {
     int i, c;
 
-    for(i = 0; i < lim - 1 && ( c = getchar() ) != EOF && c != '\n'; ++i) 
+    for(i = 0; i < lim - 1 && ( c = getchar() ) != EOF && c != '\n'; ++i) { 
         s[i] = c;
+    }
 
     if(c == '\n') {
         s[i] = c;
